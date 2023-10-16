@@ -1,0 +1,28 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+.box{
+  text-decoration: none;
+  color: gold;
+}
+
+.header{
+  color: gold;
+}
+.clas{
+  border: 1px solid gold;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px;
+}
+.clas:hover{
+  background-color: gold;
+  color: black;
+}
+.para{
+  font-family: "dancing script", sans-serif;
+  font-size: 20px;
+}
