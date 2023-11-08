@@ -1,6 +1,14 @@
 const CoinReducer = (state, action)=>{
     switch(action.type){
 
+
+      case"GET_ALLCOIN":
+        return{
+            ...state,
+            allData:action.payload,
+        };
+
+
         case "SEARCH_COINS":
       return {
         ...state,

@@ -1,3 +1,6 @@
+//search page
+
+
 import React, { useContext } from 'react'
 import CardItem from './CardItem'
 import CoinContext from '../context/CoinContext'

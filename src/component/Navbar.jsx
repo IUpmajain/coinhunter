@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg bg-warning">
   <div className="container-fluid">
-    <Link to={"/"} className="navbar-brand" href="#"><img src={Image} alt="Coin Status" height={50} width={90} /></Link>
+    <Link to={"/"} className="navbar-brand"><img src={Image} alt="Coin Status" height={50} width={90} /></Link>
 <span>
 <Link to={"/searchpage"} className='btn btn-danger'>Search</Link>
     <Link to={"/"} className='ms-2 fs-5 text-dark'><FaHome/></Link>

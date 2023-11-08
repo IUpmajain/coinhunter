@@ -1,8 +1,11 @@
+//coin description
+
 import React, { useContext, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { getCoinDetails } from '../context/CoinAction';
 import CoinContext from '../context/CoinContext';
 import Chartism from '../component/Chartism';
+
 
 const CoinPage = () => {
 
@@ -30,6 +33,7 @@ const CoinPage = () => {
     </div>
     )
   }
+
 
   return (
     <div>

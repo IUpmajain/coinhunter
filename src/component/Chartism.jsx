@@ -1,3 +1,6 @@
+//chart
+
+
 import React, { useContext, useEffect, useState } from 'react'
 import CoinContext from '../context/CoinContext'
 import { useParams } from 'react-router-dom';

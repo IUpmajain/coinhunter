@@ -7,6 +7,7 @@ const CoinContext = createContext();
 export const CoinProvider = ({children})=>{
     
   const initialState = {
+    allData:[],
     coins: [],
     coinData: null,
     coinChart:null,
