@@ -5,7 +5,7 @@ import CarcContainer from '../component/CarcContainer';
 
 
 
-const Searchpage = () => {
+const Search = () => {
 
   const { dispatch } = useContext(CoinContext);
 
@@ -24,7 +24,7 @@ const Searchpage = () => {
   }
 
   return (
-    <div>
+    <>
 
 
   
@@ -35,8 +35,8 @@ const Searchpage = () => {
       </form>
   
       <CarcContainer/>
-    </div>
+    </>
   )
 }
 
-export default Searchpage;
+export default Search;
