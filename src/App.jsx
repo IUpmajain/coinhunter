@@ -4,6 +4,7 @@ import { CoinProvider } from './context/CoinContext';
 import Navbar from './component/Navbar';
 import Home from './Pages/Home';
 import CoinPage from './Pages/CoinPage';
+import Searchpage from './pages/Searchpage';
 
 
 const App = () => {
@@ -14,7 +15,7 @@ const App = () => {
       <Navbar/>
       <Routes>
       <Route path='/' element={<Home/>}/>
-      {/* <Route path='/searchpage' element={}/> */}
+      <Route path='/searchpage' element={<Searchpage/>}/>
         <Route path='/coin/:coinid' element={<CoinPage/>}/>
       </Routes>
       </CoinProvider>

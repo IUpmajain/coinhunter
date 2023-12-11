@@ -9,7 +9,7 @@ const Navbar = () => {
   <div className="container-fluid">
     <Link to={"/"} className="navbar-brand"><img src={Image} alt="Coin Status" height={50} width={90} /></Link>
 <span>
-{/* <Link to={"/searchpage"} className='btn btn-danger'>Search</Link> */}
+<Link to={"/searchpage"} className='btn btn-danger'>Search</Link>
     <Link to={"/"} className='ms-2 fs-5 text-dark'><FaHome/></Link>
 </span>
     </div>
