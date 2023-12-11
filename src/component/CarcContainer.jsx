@@ -5,7 +5,7 @@ import React, { useContext } from 'react'
 import CardItem from './CardItem'
 import CoinContext from '../context/CoinContext'
 
-const Carccontainer = () => {
+const CarcContainer = () => {
     const {coins} = useContext(CoinContext)
     
   return (
@@ -17,4 +17,4 @@ const Carccontainer = () => {
   )
 }
 
-export default Carccontainer;
+export default CarcContainer;
