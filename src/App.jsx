@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Searchpage from './pages/Searchpage';
 import { CoinProvider } from './context/CoinContext';
 import Navbar from './component/Navbar';
 import Home from './Pages/Home';
@@ -15,7 +14,7 @@ const App = () => {
       <Navbar/>
       <Routes>
       <Route path='/' element={<Home/>}/>
-      <Route path='/searchpage' element={<Searchpage/>}/>
+      {/* <Route path='/searchpage' element={}/> */}
         <Route path='/coin/:coinid' element={<CoinPage/>}/>
       </Routes>
       </CoinProvider>
