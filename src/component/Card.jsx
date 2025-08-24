@@ -1,33 +1,64 @@
-//for table ,first page
+import React from "react";
+import { Link } from "react-router-dom";
 
-import React from 'react';
-import { Link } from 'react-router-dom';
+const Card = ({ product }) => {
+  const {
+    id,
+    image,
+    name,
+    symbol,
+    current_price,
+    price_change_percentage_24h,
+    market_cap,
+  } = product;
 
-
-const Card = ({product}) => {
+  // ✅ Format currency
+  const formatCurrency = (value) =>
+    new Intl.NumberFormat("en-US", {
+      style: "currency",
+      currency: "USD",
+      maximumFractionDigits: 2,
+    }).format(value);
 
   return (
-<table className="table">
-    <tbody>
-      <Link to={`/coin/${product.id}`}>
-      <tr style={{display:'flex', justifyContent:"space-between"}}>
-      <td className='d-flex'>
-      <img src={product.image} alt={product.name} height={50}/>
-      <div className='d-flex flex-column ms-2'>
-        <span style={{transform:"uppercase"}}>
-          {product.symbol}
-        </span>
-        <span>{product.name}</span>
-      </div>
+    <tr className="hover:bg-gray-100 transition cursor-pointer">
+      {/* Coin Info */}
+      <td className="flex items-center gap-3 py-3 px-4">
+        <Link to={`/coin/${id}`} className="flex items-center gap-3">
+          <img 
+            src={image}
+            alt={name} width={80}
+            className="h-8 w-8 rounded-full object-cover"
+          />
+          <div className="flex flex-col">
+            <span className="font-semibold uppercase text-gray-800">
+              {symbol}
+            </span>
+            <span className="text-gray-600 text-sm">{name}</span>
+          </div>
+        </Link>
       </td>
-        <td >${product.current_price}</td>
-        <td style={{color:product.price_change_percentage_24h>0 ?"rgb(14, 203, 129)" : "red"}}>{product.price_change_percentage_24h.toFixed(4)}%</td>
-        <td>{product.market_cap}M</td>
-      </tr>
-      </Link>
-    </tbody>
-    </table>
-  )
-}
 
-export default Card
+      {/* Current Price */}
+      <td className="py-3 px-4 font-medium text-gray-800">
+        {formatCurrency(current_price)}
+      </td>
+
+      {/* 24h Change */}
+      <td
+        className={`py-3 px-4 font-medium ${
+          price_change_percentage_24h >= 0 ? "text-green-500" : "text-red-500"
+        }`}
+      >
+        {price_change_percentage_24h?.toFixed(2)}%
+      </td>
+
+      {/* Market Cap */}
+      <td className="py-3 px-4 text-gray-700">
+        {market_cap.toLocaleString("en-US")}
+      </td>
+    </tr>
+  );
+};
+
+export default Card;
