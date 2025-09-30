@@ -21,7 +21,6 @@ const Navbar = () => {
             className="me-2 rounded"
             style={{ background: "white", padding: "5px", borderRadius: "8px" }}
           />
-          <span className="fw-bold fs-4 text-white">Coin Status</span>
         </Link>
 
         {/* Right Section */}
